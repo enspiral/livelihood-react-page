@@ -29,7 +29,6 @@ class App extends Component {
     let { ventures } = this.state
     return (
       <div className='App'>
-        <div className='ventures-titles'>Our Ventures</div>
         {ventures ? <VenturesGrid ventures={ventures} /> : <div />}
       </div>
     )
