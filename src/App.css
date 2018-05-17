@@ -1,5 +1,7 @@
 .App {
+  padding-top: 20px;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App-logo {
@@ -25,4 +27,62 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.ventures-titles{
+  padding: 25px 0 0 50px;
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.venture-cards{
+  margin: 10px;
+  width: 300px;
+  background: rgb(220, 225, 223);
+}
+
+
+.info-header{
+  padding: 3px 0 0 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.social-icon-container {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons {
+  margin:10px 3px 0 3px;
+}
+
+.info-wrapper{
+  position: relative;
+  margin-top: -35px;
+  padding-top: 30px;
+  width: 300px;
+  background-color: rgba(132, 141, 0, 0.705);
+  background-size: cover;
+}
+
+.info-container{
+  margin: 0px 10px 10px 10px;
+}
+
+.venture-name {
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0 8px 0 8px;
+}
+
+.venture-description {
+  margin-bottom: 10px;
+  padding: 0 8px 8px 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 5px 8px 8px 8px;
+  text-align: left;
+  font-size: 12px;
+  line-height: 1.4;
 }

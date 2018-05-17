@@ -1,21 +1,49 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import persist from 'react-localstorage-hoc'
+
 import './App.css';
 
+import VenturesGrid from './components/VenturesGrid'
+
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      ventures: null
+    }
+  }
+
+  componentDidMount() {
+    getPeople()
+      .then((data) => {
+        console.log('getpeople data: ', data)
+        this.setState({
+          ventures: data
+        })
+      }).catch((err) => {
+        console.log('Big ooooooops! ', err)
+      })
+  }
+
   render() {
+    let { ventures } = this.state
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className='App'>
+        <div className='ventures-titles'>Our Ventures</div>
+        {ventures ? <VenturesGrid ventures={ventures} /> : <div />}
       </div>
-    );
+    )
   }
 }
 
-export default App;
+function getPeople() {
+  return window.fetch(process.env.REACT_APP_PERSON_API_URL, {
+    method: 'get'
+  }).then((response) => {
+    console.info('Api request success: ', response)
+    return response.json()
+  }).catch((err) => {
+    console.error('Api request error: ', err)
+  })
+}
+export default persist(App)
