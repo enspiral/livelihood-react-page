@@ -29,6 +29,13 @@
   to { transform: rotate(360deg); }
 }
 
+.card-wrapper{
+  margin: 5px;
+  width: 350px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+
 .ventures-titles{
   padding: 25px 0 0 50px;
   text-align: left;
@@ -38,14 +45,12 @@
 
 .venture-cards{
   margin: 10px;
-  width: 300px;
   background: rgb(220, 225, 223);
 }
 
 
 .info-header{
   padding: 3px 0 0 0;
-  background-color: rgba(255, 255, 255, 0.9);
 }
 
 .social-icon-container {
@@ -59,30 +64,28 @@
 
 .info-wrapper{
   position: relative;
-  margin-top: -35px;
+  margin-top: -34px;
   padding-top: 30px;
-  width: 300px;
-  background-color: rgba(132, 141, 0, 0.705);
   background-size: cover;
 }
 
 .info-container{
-  margin: 0px 10px 10px 10px;
+  padding: 10px;
 }
 
 .venture-name {
-  color: black;
-  font-size: 18px;
+  background-color: rgba(83, 83, 83, 0.925);
+  margin-top: -35px;
+  color: white;
+  font-size: 24px;
   font-weight: 700;
-  padding: 0 8px 0 8px;
+  padding: 10px;
 }
 
 .venture-description {
   margin-bottom: 10px;
-  padding: 0 8px 8px 8px;
-  background-color: rgba(255, 255, 255, 0.9);
   padding: 5px 8px 8px 8px;
   text-align: left;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.4;
 }

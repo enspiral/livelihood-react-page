@@ -8,7 +8,7 @@ class VentureCard extends Component {
   render(){
     const {venture} = this.props
     return (
-      <div className='container'>
+      <div className='card-wrapper'>
         {venture ? <div className='venture-cards'>
           <VentureImage image={venture.gravatarUrl} />
           <div className='info-wrapper'>
