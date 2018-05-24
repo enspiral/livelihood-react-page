@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Card from '@material-ui/core/Card';
 
 import VentureImage from './atoms/VentureImage'
 import InfoHeader from './molecules/InfoHeader'
@@ -8,7 +9,7 @@ class VentureCard extends Component {
   render(){
     const {venture} = this.props
     return (
-      <div className='card-wrapper'>
+      <Card className='card-wrapper'>
         {venture ? <div className='venture-cards'>
           <VentureImage image={venture.gravatarUrl} />
           <div className='info-wrapper'>
@@ -19,7 +20,7 @@ class VentureCard extends Component {
           </div>
         </div> : <div/>
       }
-      </div>
+      </Card>
     )
   }
 }
