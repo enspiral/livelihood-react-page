@@ -1,0 +1,90 @@
+.App {
+  padding-top: 20px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.card-wrapper{
+  margin: 5px;
+  width: 350px;
+}
+
+
+.ventures-titles{
+  padding: 25px 0 0 50px;
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.venture-cards{
+  margin: 10px;
+  background: rgb(255, 255, 255);
+}
+
+
+.info-header{
+  padding: 3px 0 0 0;
+}
+
+.social-icon-container {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons {
+  margin:10px 3px 0 3px;
+}
+
+.info-wrapper{
+  position: relative;
+  margin-top: -34px;
+  padding-top: 30px;
+  background-size: cover;
+}
+
+.info-container{
+  padding: 10px;
+}
+
+.venture-name {
+  background-color: rgba(83, 83, 83, 0.925);
+  margin-top: -35px;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.venture-description {
+  margin-bottom: 10px;
+  padding: 5px 8px 8px 8px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.4;
+}
