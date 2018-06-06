@@ -1,3 +1,63 @@
+$small: 480px;
+$medium: 798px;
+$large: 799px;
+$larger: 960px;
+$xlarge: 1400px;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == "small" {
+    @media (max-width: $small) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "medium" {
+    @media (max-width: $medium) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "large" {
+    @media (min-width: $large) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "larger" {
+    @media (min-width: $larger) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "xlarge" {
+    @media (min-width: $xlarge) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint == "ie10+" {
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      @content;
+    }
+  }
+  @else if $breakpoint == "tablet" {
+    @media only screen and (min-width: 799px) and (max-width: 1024px){
+      @content;
+    }
+  }
+  @else if $breakpoint == "tablet-down" {
+    @media only screen and (max-width: 1024px){
+      @content;
+    }
+  }
+  @else {
+    @media ($breakpoint) {
+      @content;
+    }
+  }
+}
+
+
 .App {
   padding-top: 20px;
   text-align: center;
@@ -30,8 +90,19 @@
 }
 
 .card-wrapper{
-  margin: 5px;
-  width: 350px;
+  padding: 2.5px;
+  @include respond-to('large'){
+    width: 50%;
+  }
+  @include respond-to('xlarge'){
+    width: 33.3%;
+  }
+  @include respond-to('medium'){
+    width: 100%;
+  }
+  @include respond-to('small'){
+    width: 100%;
+  }
 }
 
 
