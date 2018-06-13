@@ -20,7 +20,7 @@ function VenturesGrid (props) {
   return (
     <Masonry
       className={'my-gallery-class'} 
-      styel={style}
+      style={style}
       elementType={'ul'} 
       options={masonryOptions} 
       disableImagesLoaded={false} 

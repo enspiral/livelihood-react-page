@@ -5,15 +5,11 @@ import VentureImage from './atoms/VentureImage'
 import InfoHeader from './molecules/InfoHeader'
 import InfoDescription from './atoms/InfoDescription'
 
-const style = {
-  left: '0px',
-}
-
 class VentureCard extends Component {
   render(){
     const {venture} = this.props
     return (
-      <Card className='card-wrapper' style={style}>
+      <Card className='card-wrapper'>
         {venture ? <div className='venture-cards'>
           <VentureImage image={venture.gravatarUrl} />
           <div className='info-wrapper'>
