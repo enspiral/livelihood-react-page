@@ -6,8 +6,13 @@ import VentureCard from './VentureCard'
 
 const masonryOptions = {
   transitionDuration: 0
-};
+}
+
 const imagesLoadedOptions = { background: '.my-bg-image-el' }
+
+const style = {
+  padding: '0px'
+}
 
 function VenturesGrid (props) {
   const { ventures } = props
@@ -15,6 +20,7 @@ function VenturesGrid (props) {
   return (
     <Masonry
       className={'my-gallery-class'} 
+      styel={style}
       elementType={'ul'} 
       options={masonryOptions} 
       disableImagesLoaded={false} 
