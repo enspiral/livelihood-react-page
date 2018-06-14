@@ -9,18 +9,20 @@ class VentureCard extends Component {
   render(){
     const {venture} = this.props
     return (
-      <Card className='card-wrapper'>
-        {venture ? <div className='venture-cards'>
-          <VentureImage image={venture.gravatarUrl} />
-          <div className='info-wrapper'>
-            <div className='info-container'>
-              <InfoHeader venture={venture}/>
-              <InfoDescription description={venture.publicDescription}/>
+      <div className='card-wrapper'>
+        <Card>
+          {venture ? <div className='venture-cards'>
+            <VentureImage image={venture.gravatarUrl} />
+            <div className='info-wrapper'>
+              <div className='info-container'>
+                <InfoHeader venture={venture}/>
+                <InfoDescription description={venture.publicDescription}/>
+              </div>
             </div>
-          </div>
-        </div> : <div/>
-      }
-      </Card>
+          </div> : <div/>
+        }
+        </Card>
+      </div>
     )
   }
 }

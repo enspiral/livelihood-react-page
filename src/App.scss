@@ -89,7 +89,7 @@ $xlarge: 1400px;
 }
 
 .card-wrapper{
-  padding: 2.5px;
+  padding: 5px;
   @include respond-to('large'){
     width: 50%;
   }
