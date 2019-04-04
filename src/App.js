@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import persist from 'react-localstorage-hoc'
 
-import './App.css';
-
 import VenturesGrid from './components/VenturesGrid'
 
 class App extends Component {
