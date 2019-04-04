@@ -1,6 +1,6 @@
 import React from 'react';
 
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import envelope from '@fortawesome/fontawesome-free-solid/faEnvelope'
 
 function DisplayEmail(props) {
