@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import persist from 'react-localstorage-hoc'
 
+import { config } from './config.js'
+
 import VenturesGrid from './components/VenturesGrid'
 
 class App extends Component {
@@ -34,7 +36,8 @@ class App extends Component {
 }
 
 function getPeople() {
-  return window.fetch(process.env.REACT_APP_PERSON_API_URL, {
+  const url = process.env.NODE_ENV === 'development' ? config.apiVentures : config.shopifyProxy
+  return window.fetch(url, {
     method: 'get'
   }).then((response) => {
     console.info('Api request success: ', response)
